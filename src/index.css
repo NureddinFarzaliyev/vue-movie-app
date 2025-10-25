@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-vue: #42b883;
+  --color-vue-text: #213547;
+}
