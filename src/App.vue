@@ -1,5 +1,5 @@
 <script setup>
-import PageHeader from '@/widgets/PageHeader/PageHeader.vue'
+import PageHeader from '@/widgets/PageHeader.vue'
 import { RouterView } from 'vue-router'
 </script>
 
