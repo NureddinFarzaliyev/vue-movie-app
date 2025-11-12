@@ -1,5 +1,6 @@
 <script setup>
 import { tmdbApi } from '@/app/tmdbApi'
+import LoadingPage from '@/shared/ui/LoadingPage.vue'
 import { generateImageUrl } from '@/shared/utils/generateImageUrl'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
@@ -49,6 +50,5 @@ onMounted(async () => {
       </div>
     </div>
   </div>
-
-  <div v-else class="h-screen w-screen flex items-center justify-center">Loading...</div>
+  <LoadingPage v-else />
 </template>

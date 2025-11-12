@@ -8,3 +8,7 @@
 body {
   background-color: #18181b;
 }
+
+@utility p-page {
+  @apply px-3 md:px-10 pt-12;
+}

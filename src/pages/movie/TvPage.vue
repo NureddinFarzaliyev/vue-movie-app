@@ -54,5 +54,5 @@ onMounted(async () => {
       </div>
     </div>
   </div>
-  <div v-else><LoadingPage /></div>
+  <LoadingPage v-else />
 </template>
