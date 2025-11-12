@@ -1,5 +1,7 @@
 <script setup>
 import { tmdbApi } from '@/app/tmdbApi'
+import SeasonCard from '@/pages/movie/SeasonCard.vue'
+import LoadingPage from '@/shared/ui/LoadingPage.vue'
 import { generateImageUrl } from '@/shared/utils/generateImageUrl'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
@@ -21,7 +23,7 @@ onMounted(async () => {
       class="absolute top-0 w-screen h-screen object-cover object-center left-0"
     />
     <div
-      class="bg-black/90 absolute top-0 left-0 p-4 md:p-10 min-h-screen w-screen flex max-lg:flex-col gap-10"
+      class="bg-black/90 absolute top-0 left-0 p-4 md:p-10 lg:h-screen w-screen flex max-lg:flex-col gap-10"
     >
       <div class="sm:h-[60vh] shrink-0">
         <img
@@ -46,9 +48,11 @@ onMounted(async () => {
           {{ movie.number_of_episodes }} eps, {{ movie.vote_average.toFixed(1) }}/10
         </p>
         <p class="mt-2">{{ movie.overview }}</p>
+        <div class="mt-8 flex flex-col gap-3 overflow-scroll lg:h-100">
+          <SeasonCard v-for="(season, key) in movie.seasons" :season :key />
+        </div>
       </div>
     </div>
   </div>
-
-  <div v-else class="h-screen w-screen flex items-center justify-center">Loading...</div>
+  <div v-else><LoadingPage /></div>
 </template>

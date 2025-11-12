@@ -4,3 +4,7 @@
   --color-vue: #42b883;
   --color-vue-text: #213547;
 }
+
+body {
+  background-color: #18181b;
+}
