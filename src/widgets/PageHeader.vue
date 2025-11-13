@@ -22,6 +22,7 @@ const onSearch = (e) => {
     </form>
     <div class="flex gap-3">
       <NavButton to="/" label="Home" />
+      <NavButton to="/wishlist" label="Wishlist" />
       <NavButton to="/about" label="About" />
     </div>
   </div>

@@ -12,3 +12,7 @@ body {
 @utility p-page {
   @apply px-3 md:px-10 pt-12;
 }
+
+.movie-card:hover div {
+  opacity: 1;
+}
