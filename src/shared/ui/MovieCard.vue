@@ -4,7 +4,11 @@ import classNames from 'classnames'
 import { computed, inject } from 'vue'
 import { RouterLink } from 'vue-router'
 
-const props = defineProps(['movie', 'isTv', 'className'])
+const props = defineProps({
+  movie: { type: Object, required: true },
+  isTv: { type: Boolean, default: false },
+  className: { type: String, default: '' },
+})
 
 const to = computed(() => `/${props.isTv ? 'tv' : 'movie'}/${props.movie.id}`)
 
